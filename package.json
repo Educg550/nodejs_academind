@@ -1,0 +1,23 @@
+{
+  "name": "nodejs_academind",
+  "version": "1.0.0",
+  "description": "Learned from NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno) course on Udemy",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Educg550/nodejs_academind.git"
+  },
+  "author": "Eduardo Cruz Guedes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Educg550/nodejs_academind/issues"
+  },
+  "homepage": "https://github.com/Educg550/nodejs_academind#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
