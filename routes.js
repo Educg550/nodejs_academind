@@ -13,7 +13,7 @@ const handleRequests = (req, res) => {
     res.write("<h2>Enter Username</h2>");
     // name attribute is important to the server request
     res.write(
-      '<form action="/create-user" method="POST"><input type="text" name="user"><button type="submit">Send</button></form></body>'
+      '<form action="/create-user" method="POST"><input type="text" name="username"><button type="submit">Send</button></form></body>'
     );
     res.write("</html>");
     return res.end();
