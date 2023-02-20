@@ -50,7 +50,11 @@ const handleRequests = (req, res) => {
     res.write("<li>User 4</li>");
     res.write("<li>User 5</li></ul>");
     res.write("</html>");
+    return res.end();
   }
+
+  res.setHeader("Location", "https://http.cat/404");
+  res.statusCode = 301;
 
   // Ends the event loop (not used often in real environments)
   // process.exit();
