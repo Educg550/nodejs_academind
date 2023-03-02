@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const path = require("path");
 
 const userRoutes = require("./routes/user");
 const profilesRoutes = require("./routes/profiles");
@@ -20,7 +21,7 @@ app.use("/user", userRoutes);
 
 // Only executes if no route matched before
 app.use((req, res) => {
-  res.sendFile(process.cwd() + "/views/404-status.html");
+  res.sendFile(path.join(process.cwd(), "views", "404-status.html"));
 });
 
 app.listen(3000);
