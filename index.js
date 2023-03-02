@@ -1,14 +1,26 @@
 const express = require("express");
+const bodyParser = require("body-parser");
+
+const userRoutes = require("./routes/user");
+const profilesRoutes = require("./routes/profiles");
+
 const app = express();
 
-app.use("/users", (req, res) => {
-  console.log(`Now on route ${req.headers.location}`);
-  res.sendFile(__dirname + "/views/users.html");
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Will execute for every path starting with '/'
+app.use((req, res, next) => {
+  console.log("This always runs!");
+  next();
 });
 
-app.use("/", (req, res) => {
-  console.log(`Now on route ${req.headers.location}`);
-  res.sendFile(__dirname + "/views/index.html");
+app.use(profilesRoutes);
+// Shorthand for adding '/user' after every route under userRoutes
+app.use("/user", userRoutes);
+
+// Only executes if no route matched before
+app.use((req, res) => {
+  res.sendFile(process.cwd() + "/views/404-status.html");
 });
 
 app.listen(3000);
