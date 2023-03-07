@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Add User</title>
+    <title>User List</title>
     <style>
       body {
         padding: 0;
@@ -51,43 +51,6 @@
       .main-header__item a.active {
         color: #3e00a1;
       }
-
-      .user-form {
-        width: 20rem;
-        max-width: 90%;
-        margin: auto;
-      }
-
-      .form-control {
-        margin: 1rem 0;
-      }
-
-      .form-control label,
-      .form-control input {
-        display: block;
-        width: 100%;
-      }
-
-      .form-control input {
-        border: 1px solid #dbc441;
-        font: inherit;
-        border-radius: 2px;
-      }
-
-      button {
-        font: inherit;
-        border: 1px solid #3e00a1;
-        color: #3e00a1;
-        background: white;
-        border-radius: 3px;
-        cursor: pointer;
-      }
-
-      button:hover,
-      button:active {
-        background-color: #3e00a1;
-        color: white;
-      }
     </style>
   </head>
 
@@ -95,23 +58,19 @@
     <header class="main-header">
       <nav class="main-header__nav">
         <ul class="main-header__item-list">
-          <li class="main-header__item"><a href="/">User List</a></li>
           <li class="main-header__item">
-            <a class="active" href="/user/add-user">Add User</a>
+            <a class="active" href="/">User List</a>
+          </li>
+          <li class="main-header__item">
+            <a href="/user/add-user">Add User</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <form class="user-form" action="/user/add-user" method="POST">
-        <div class="form-control">
-          <label for="username">Username</label>
-          <input type="text" name="username" id="username" />
-        </div>
-
-        <button type="submit">Add User</button>
-      </form>
+      <h1>My Users</h1>
+      <p>List of all the users...</p>
     </main>
   </body>
 </html>
