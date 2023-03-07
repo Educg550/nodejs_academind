@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   // process.cwd() returns the directory where package.json resides
-  res.sendFile(path.join(rootDir, "views", "users.html"));
+  res.sendFile(path.join(rootDir, "views", "index.html"));
 });
 
 module.exports = router;

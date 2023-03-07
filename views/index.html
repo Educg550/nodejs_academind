@@ -2,12 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Middleware testing</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>User List</title>
+    <!-- Served statically with express (IT'S IMPORTANT TO USE ABSOLUTE PATHS!) -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
   </head>
+
   <body>
-    <h1>Welcome to my Middleware testing page!</h1>
-    <p>You are now on a generic route</p>
+    <header class="main-header">
+      <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+          <li class="main-header__item">
+            <a class="active" href="/">User List</a>
+          </li>
+          <li class="main-header__item">
+            <a href="/user/add-user">Add User</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>My Users</h1>
+      <p>List of all the users...</p>
+    </main>
   </body>
 </html>
